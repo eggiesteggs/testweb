@@ -9,21 +9,25 @@
     <h1>Formas un ievadlauku piemērs</h1>
     <form>
         <p>Šodienas datums <input name="datums"></p>
-        <p>Ja gribi uzzināt šodienas datumu, spied pogu DATUMS 
+        <p>Ja gribi uzzināt šodienas datumu, spied pogu DATUMS
             <input onclick="datums.value=new Date();" name="poga" value="DATUMS" type="button">
         </p>
-        <p>Ja gribi izdzēst datumua lodziņa saturu, spied pogu RESET
+        <p>Ja gribi izdzēst datuma lodziņa saturu, spied pogu RESET
             <input value="RESET" type="reset">
         </p>
     </form>
     <form>
-        <div>1.skaitlis<input type="text" name="sk1"> </div>
+        <div>1. skaitlis <input type="text" name="sk1"></div>
+        <div>2. skaitlis <input type="text" name="sk2"></div>
+        <hr>
         <div>
             <input value="X" name="reiz" onclick="rez.value=sk1.value*sk2.value" type="button">
+            <input value="+" name="summa" onclick="rez.value=parseFloat(sk1.value)+parseFloat(sk2.value)" type="button">
+            <input value="-" name="atnem" onclick="rez.value=parseFloat(sk1.value)-parseFloat(sk2.value)" type="button">
+            <input value="/" name="dalit" onclick="rez.value=parseFloat(sk1.value)/parseFloat(sk2.value)" type="button">
+            <input value="RESET" type="reset">
         </div>
-        <div>2.skaitlis<input type="text" name="sk2"> </div>
-        <hr>
-        <div>Rezultāts<input name="rez"> </div>
+        <div>Rezultāts <input name="rez"></div>
     </form>
 </body>
 </html>
